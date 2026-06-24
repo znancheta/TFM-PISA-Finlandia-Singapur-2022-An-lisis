@@ -542,18 +542,3 @@ ggplot(pisa_ready, aes(x = ESCS, y = row_sd, color = CNT)) +
   # Colores coherentes con el resto de tu estudio
   scale_color_manual(values = c("steelblue", "darkorange"), 
                      labels = c("Finland", "Singapore"))
-
-# ##########################################################################################
-# ## 5) Ver la falta de datos
-# # Using the naniar package to see the "matrix" effect
-# library(naniar)
-# library(ggplot2)
-# 
-# # Select a subset of your variables to visualize the gaps
-# pisa_subset <- pisa_ready %>%
-#   select(PERSEVAGR, PV1MATH, ESCS, applied_score, formal_score, manual_pca)
-# 
-# # Visualize the missingness pattern
-# vis_miss(pisa_subset) +
-#   theme(axis.text.x = element_text(angle = 90, size = 8)) +
-#   labs(title = "Figure 2: Missing Data Patterns Including Rotated Scales")
